@@ -1,0 +1,113 @@
+.check-reservation-page {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.reservations-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reservations-table th, .reservations-table td {
+  border: none;
+  color: #333;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+.reservations-table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.reservations-table tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+.reservations-table tr:hover {
+  background-color: #e8f5e9;
+  transform: scale(1.02);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.error-message {
+  color: #f44336;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.action-btn {
+  padding: 8px 20px; /* Adjusted padding for balance */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 150px; /* Fixed width to ensure same size for all buttons */
+  text-align: center; /* Ensures text is centered inside the button */
+  transition: all 0.3s ease;
+  margin: 5px; /* Added margin for spacing between buttons */
+}
+
+
+.action-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.complete {
+  background-color: #4caf50;
+  color: white;
+}
+
+.complete:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete:hover:not(:disabled) {
+  background-color: #e53935;
+}
+
+.update {
+  background-color: #2196f3;
+  color: white;
+}
+
+.update:hover:not(:disabled) {
+  background-color: #1e88e5;
+}
+
+.special-request {
+  max-width: 250px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555;
+  font-style: italic;
+}

@@ -1,0 +1,31 @@
+/* Importing a unique font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* Full-screen background setup */
+
+
+/* Styling the restaurant name with animations and modern effects */
+.restaurant-name {
+  font-size: 4rem; /* Larger font size for emphasis */
+  font-weight: 700; /* Bold text for prominence */
+  color:black; /* White text color */
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  position: relative;
+  animation: textEffect 3s ease-in-out infinite, typing 2s steps(30) 1s forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid #fff; /* Create a typing cursor effect */
+}
+
+/* Animation: Text color transition and glowing effect */
+
+/* Typing effect animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

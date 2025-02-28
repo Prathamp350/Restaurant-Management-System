@@ -1,0 +1,36 @@
+/* order-form.css */
+.order-form {
+    margin-bottom: 20px;
+  }
+  
+  .order-form h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #007bff;
+  }
+  
+  .order-form ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .order-form li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .order-form li button {
+    margin-left: 10px;
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .order-form li button:hover {
+    background-color: #218838;
+  }
+  

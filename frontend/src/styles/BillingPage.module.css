@@ -1,0 +1,53 @@
+.billingContainer {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.itemsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item {
+  font-size: 18px;
+  color: #555;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.printButton {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.printButton:hover {
+  background-color: #0056b3;
+}
+
+.printableContent {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}

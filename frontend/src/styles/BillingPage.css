@@ -1,0 +1,162 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Container */
+.billing-page {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5dc; /* Cream color */
+    color: #333;
+    min-height:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Billing Container */
+.billing-box {
+    background: rgba(255, 255, 255, 0.9); /* More visible */
+    backdrop-filter: blur(8px);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.billing-box:hover {
+    transform: scale(1.02);
+}
+
+/* Heading */
+.billing-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d2691e; /* Chocolate shade */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Printable Content */
+.bill-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: left;
+    width: 100%;
+}
+
+/* Order Details */
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+/* Table Styling */
+.bill-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.bill-items th, .bill-items td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bill-items th {
+    background: rgba(0, 0, 0, 0.1);
+    color: #d2691e;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.bill-items tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Total Price */
+.bill-total {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* Print Button */
+.bill-print {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #8b4513, #a0522d);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.bill-print:hover {
+    background: linear-gradient(135deg, #a0522d, #8b4513);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .billing-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .bill-print {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Print Mode */
+@media print {
+    /* Hide everything except the bill content */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Make bill content visible */
+    #bill-content, #bill-content * {
+        visibility: visible;
+    }
+
+    /* Ensure correct positioning */
+    #bill-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        color: #000;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    /* Hide the print button */
+    .bill-print {
+        display: none;
+    }
+}
