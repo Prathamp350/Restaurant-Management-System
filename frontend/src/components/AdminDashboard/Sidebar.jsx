@@ -14,6 +14,7 @@ const Sidebar = () => {
         <li><Link to="/admin/order">Orders</Link></li>
         <li><Link to="/admin/menu">Menu</Link></li>
         <li><Link to="/admin/update-menu">Update Menu</Link></li>
+        <li><Link to="/admin/completed-reservations">Reservation History</Link></li>
         <li><Link to="/admin/sales-report">Sales Report</Link></li>
 
       </ul>

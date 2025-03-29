@@ -37,7 +37,15 @@ const OrderPage1 = () => {
   // Add item to the order
   const handleAddItem = (event) => {
     const selectedItemName = event.target.value;
-    const selectedMenuItem = menuItems.find(item => item.name === selectedItemName);
+    
+    // Search through all categories to find the selected item
+    let selectedMenuItem = null;
+    Object.values(menuItems).forEach(categoryItems => {
+      const found = categoryItems.find(item => item.name === selectedItemName);
+      if (found) {
+        selectedMenuItem = found;
+      }
+    });
 
     if (selectedMenuItem && !newOrder.items.some(item => item.name === selectedItemName)) {
       const updatedItems = [

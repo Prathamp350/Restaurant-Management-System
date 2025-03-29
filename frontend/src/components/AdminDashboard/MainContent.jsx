@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './MainContent.css';
+import '../AdminDashboard/MainContent.css';
 import { Link } from 'react-router-dom';
 
 const MainContent = () => {

@@ -54,15 +54,15 @@ const MainContent = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="main-content">
+    <div className="main-content1">
       {/* Stats and Quick Actions */}
-      <div className="top-section">
-        <div className="stats-cards">
-          <div className="stat-card">
+      <div className="top-section1">
+        <div className="stats-cards1">
+          <div className="stat-card1">
             <h3>Pending Reservations</h3>
             <p>{stats.pendingReservations}</p>
           </div>
-          <div className="stat-card">
+          <div className="stat-card1">
             <h3>Pending Orders</h3>
             <p>{stats.reportsGenerated}</p>
           </div>

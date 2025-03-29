@@ -13,7 +13,7 @@ import UpdateMenuPage from './pages/UpdateMenuPage';
 import BillingPage from './pages/BillingPage'; // Import Billing Page
 import Home from './pages/Home';
 import SalesReport from './pages/Sales-report';
-
+import CompletedReservations from './pages/CompletedReservations';
 
 
 
@@ -40,6 +40,7 @@ const App = () => {
           <Route path="update-menu" element={<UpdateMenuPage />} />
           <Route path="home" element={<Home />} />
           <Route path="sales-report" element={<SalesReport />} />
+          <Route path="completed-reservations" element={<CompletedReservations />} />
         </Route>
 
         {/* Employee Dashboard */}

@@ -57,14 +57,14 @@ const CheckReservation = () => {
   };
   
 
-  const activeReservations = reservations.filter(res => res.status !== "Completed");
+  const activeReservations = reservations.filter(res => res.status === "Pending");
   
 
   return (
     <div className="check-reservation-page">
-      <h1>Reservations</h1>
-      {reservations.length === 0 ? (
-        <p>No reservations found.</p>
+      <h1>Pending Reservations</h1>
+      {activeReservations.length === 0 ? (
+        <p>No pending reservations found.</p>
       ) : (
         <table className="reservations-table">
           <thead>
@@ -80,7 +80,7 @@ const CheckReservation = () => {
             </tr>
           </thead>
           <tbody>
-            {reservations.map((reservation) => (
+            {activeReservations.map((reservation) => (
               <tr key={reservation._id}>
                 <td>{reservation.name}</td>
                 <td>{reservation.mobile}</td>

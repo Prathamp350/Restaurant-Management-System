@@ -6,7 +6,7 @@ import { FaBell } from "react-icons/fa"; // Import notification icon
 
 const Navbar = () => {
   const [user, setUser] = useState({ username: "" });
-  const [reservations, setReservations] = useState([]);
+  const [pendingOrders, setPendingOrders] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
@@ -27,21 +27,20 @@ const Navbar = () => {
     };
 
     fetchUser();
-    fetchTodaysReservations();
+    fetchPendingOrders();
   }, []);
 
-  const fetchTodaysReservations = async () => {
+  const fetchPendingOrders = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/reservations");
-      const today = new Date().toISOString().split("T")[0];
-
-      const todaysReservations = response.data.filter(
-        (reservation) => reservation.date.split("T")[0] === today
+      const response = await axios.get("http://localhost:5000/api/orders");
+      
+      const pendingOrders = response.data.filter(
+        (order) => order.status === "pending"
       );
 
-      setReservations(todaysReservations);
+      setPendingOrders(pendingOrders);
     } catch (err) {
-      console.error("Error fetching reservations:", err);
+      console.error("Error fetching pending orders:", err);
     }
   };
 
@@ -52,22 +51,22 @@ const Navbar = () => {
       <div className="navbar-actions">
         <div className="notification-icon" onClick={() => setShowDropdown(!showDropdown)}>
           <FaBell size={24} />
-          {reservations.length > 0 && <span className="notification-badge">{reservations.length}</span>}
+          {pendingOrders.length > 0 && <span className="notification-badge">{pendingOrders.length}</span>}
         </div>
 
         {showDropdown && (
           <div className="notification-dropdown">
-            <h4>Today's Reservations ({reservations.length})</h4>
-            {reservations.length > 0 ? (
+            <h4>Pending Orders ({pendingOrders.length})</h4>
+            {pendingOrders.length > 0 ? (
               <ul>
-                {reservations.map((res) => (
-                  <li key={res._id}>
-                    <strong>{res.name}</strong> - {res.time}, {res.guests} guests
+                {pendingOrders.map((order) => (
+                  <li key={order._id}>
+                    <strong>Order #{order._id}</strong> - {order.items.length} items
                   </li>
                 ))}
               </ul>
             ) : (
-              <p>No reservations for today.</p>
+              <p>No pending orders.</p>
             )}
           </div>
         )}

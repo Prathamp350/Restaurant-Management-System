@@ -1,17 +1,17 @@
-.main-content {
+.main-content1 {
     padding: 20px;
   }
   
-  .top-section {
+  .top-section1 {
     margin-bottom: 30px; /* Space between stats/quick actions and next content */
   }
   
-  .stats-cards {
+  .stats-cards1 {
     display: flex;
     justify-content: space-between;
   }
   
-  .stat-card {
+  .stat-card1 {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
@@ -19,11 +19,11 @@
     text-align: center;
   }
   
-  .stat-card h3 {
+  .stat-card1 h3 {
     margin-bottom: 10px;
   }
   
-  .stat-card p {
+  .stat-card1 p {
     font-size: 24px;
     font-weight: bold;
   }
